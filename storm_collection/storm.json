@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "09d5a973-bac1-4fec-8d93-542f2ea29813",
 		"name": "storm",
-		"description": "这是storm的接口测试用例集合",
+		"description": "这是storm的接口测试用例集合。\n\n修改描述，测试是否自动同步Github。",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
