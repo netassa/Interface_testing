@@ -1,9 +1,11 @@
 {
 	"info": {
-		"_postman_id": "09d5a973-bac1-4fec-8d93-542f2ea29813",
-		"name": "storm",
+		"_postman_id": "f9dae60b-d856-4b4a-b73f-b2c8cefaa5a4",
+		"name": "storm Copy",
 		"description": "这是storm的接口测试用例集合。\n\n修改描述，测试是否自动同步Github。",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7178713",
+		"_collection_link": "https://blue-equinox-387916.postman.co/workspace/My-Workspace~5a61ea37-5d8d-456c-837d-678ab0dca394/collection/7178713-f9dae60b-d856-4b4a-b73f-b2c8cefaa5a4?action=share&source=collection_link&creator=7178713"
 	},
 	"item": [
 		{
@@ -12,7 +14,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "7d149d23-9e19-413c-92db-0af0c1645855",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
@@ -28,10 +29,6 @@
 					}
 				}
 			],
-			"id": "d2e2bf19-4ee2-4fae-b1b8-caafaf3a3463",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -61,7 +58,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "13ec95dd-b9ad-4755-af3e-18be763628c2",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
@@ -77,10 +73,6 @@
 					}
 				}
 			],
-			"id": "cbee8587-b067-48ea-922e-c2a9baa3afb6",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -94,7 +86,16 @@
 						}
 					]
 				},
-				"url": "http://{{domain}}/getuser",
+				"url": {
+					"raw": "http://{{domain}}/getuser",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getuser"
+					]
+				},
 				"description": "请求方式post"
 			},
 			"response": []
@@ -105,7 +106,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "2684698c-7653-47df-a4c8-8a4694ad6f48",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Body is correct\", function () {",
@@ -120,10 +120,6 @@
 					}
 				}
 			],
-			"id": "5d4b8970-ee0e-4173-b782-068f55775484",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "GET",
 				"header": [
@@ -132,7 +128,16 @@
 						"value": "application/json"
 					}
 				],
-				"url": "http://{{domain}}/getuser2",
+				"url": {
+					"raw": "http://{{domain}}/getuser2",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getuser2"
+					]
+				},
 				"description": "Post请求"
 			},
 			"response": []
@@ -143,7 +148,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ac118545-420a-4ecc-8721-390c08ba52f9",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Body matches string\", function () {",
@@ -153,10 +157,6 @@
 					}
 				}
 			],
-			"id": "8db81435-4c08-4d81-9bbc-337bb1ad1b8e",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "POST",
 				"header": [
@@ -169,7 +169,16 @@
 					"mode": "raw",
 					"raw": "{\n\t\"userid\" : 1\n}"
 				},
-				"url": "http://{{domain}}/getmoney"
+				"url": {
+					"raw": "http://{{domain}}/getmoney",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getmoney"
+					]
+				}
 			},
 			"response": []
 		},
@@ -179,7 +188,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "30210a28-650e-49b1-9291-fa62120d5506",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Body is correct\", function () {",
@@ -192,17 +200,21 @@
 					}
 				}
 			],
-			"id": "18e72208-6efb-4bea-86d0-85d161859375",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"auth": {
 					"type": "basic",
-					"basic": {
-						"password": "123456",
-						"username": "admin"
-					}
+					"basic": [
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
 				},
 				"method": "POST",
 				"header": [],
@@ -221,7 +233,16 @@
 						}
 					]
 				},
-				"url": "http://{{domain}}/setmoney",
+				"url": {
+					"raw": "http://{{domain}}/setmoney",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"setmoney"
+					]
+				},
 				"description": "http 权限验证"
 			},
 			"response": []
@@ -232,7 +253,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "1d94b996-65f4-4f18-88fa-eee0f40f8059",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Body is correct\", function () {",
@@ -242,10 +262,6 @@
 					}
 				}
 			],
-			"id": "86c601bf-81b7-44a7-8d92-2d22ec190eef",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "POST",
 				"header": [
@@ -269,45 +285,16 @@
 						}
 					]
 				},
-				"url": "http://{{domain}}/setmoney2"
-			},
-			"response": []
-		},
-		{
-			"name": "上传文件-1",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "36786239-b66c-4f7a-8321-e5c3d453b4b9",
-						"type": "text/javascript",
-						"exec": [
-							"pm.test(\"Body is correct\", function () {",
-							"    pm.response.to.have.body( { code: 200, success: '成功' });",
-							"});"
-						]
-					}
-				}
-			],
-			"id": "0c7528f5-8412-4337-85ae-54f33c5f448c",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "file",
-							"description": "上传文件接口，不适合postman自动化测试",
-							"type": "file",
-							"src": "1234.txt"
-						}
+				"url": {
+					"raw": "http://{{domain}}/setmoney2",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"setmoney2"
 					]
-				},
-				"url": "http://{{domain}}/uploadfile"
+				}
 			},
 			"response": []
 		}
